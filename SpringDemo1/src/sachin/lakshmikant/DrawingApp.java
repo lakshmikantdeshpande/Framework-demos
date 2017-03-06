@@ -1,6 +1,7 @@
 package sachin.lakshmikant;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class DrawingApp {
@@ -15,7 +16,7 @@ public class DrawingApp {
 				"spring.xml");
 		Triangle triangle = (Triangle) ctx.getBean("triangle");
 		triangle.draw();
-
+		((AbstractApplicationContext) ctx).close();
 	}
 
 }

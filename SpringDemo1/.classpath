@@ -3,7 +3,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/SpringJars"/>
-	<classpathentry kind="lib" path="D:/Code/spring-framework-4.3.7.RELEASE/commons-logging-1.2.jar"/>
-	<classpathentry kind="lib" path="D:/Code/spring-framework-4.3.7.RELEASE/commons-logging-1.2-javadoc.jar"/>
+	<classpathentry kind="lib" path="/home/sachin/Desktop/commons-logging-1.2/commons-logging-1.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
