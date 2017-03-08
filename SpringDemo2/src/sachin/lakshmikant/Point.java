@@ -1,5 +1,7 @@
 package sachin.lakshmikant;
 
+import org.springframework.beans.factory.annotation.Required;
+
 public class Point {
 	private int x;
 	private int y;
@@ -8,10 +10,12 @@ public class Point {
 		return x;
 	}
 
+	@Required
 	public void setX(int x) {
 		this.x = x;
 	}
 
+	@Required
 	public int getY() {
 		return y;
 	}
