@@ -7,7 +7,6 @@ public class Topic {
     private String description;
 
     public Topic() {
-
     }
 
     public Topic(String id, String name, String description) {
@@ -25,7 +24,6 @@ public class Topic {
     }
 
     public String getName() {
-
         return name;
     }
 
@@ -40,4 +38,5 @@ public class Topic {
     public void setDescription(String description) {
         this.description = description;
     }
+
 }
