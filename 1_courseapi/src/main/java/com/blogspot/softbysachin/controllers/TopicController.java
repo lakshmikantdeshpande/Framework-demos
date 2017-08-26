@@ -1,21 +1,31 @@
 package com.blogspot.softbysachin.controllers;
 
 import com.blogspot.softbysachin.model.Topic;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.blogspot.softbysachin.service.TopicService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.Arrays;
 import java.util.List;
 
 @RestController
 public class TopicController {
 
+    @Autowired
+    private TopicService topicService;
+
     @RequestMapping("/topics")
     public List<Topic> getAllTopics() {
-        return Arrays.asList(
-                new Topic("1", "Daenerys Targaryen", "Mother of dragons"),
-                new Topic("2", "John Snow", "The one who knows nothing")
-        );
+        return topicService.getAllTopics();
+    }
+
+    @RequestMapping("/topics/{id}")
+    public Topic getTopicById(@PathVariable String id) {
+        return topicService.getTopicById(id);
+    }
+
+    @RequestMapping(method = RequestMethod.POST, value = "/topics")
+    public void addTopic(@RequestBody Topic topic) {
+        topicService.addTopic(topic);
     }
 
 }
