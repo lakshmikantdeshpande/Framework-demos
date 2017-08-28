@@ -33,6 +33,7 @@ public class TopicController {
         topicService.updateTopic(topic);
     }
 
+    // I shouldn't have used a requestbody here :P (useless)
     @RequestMapping(method = RequestMethod.DELETE, value = "/topics/{id}")
     public void deleteTopic(@PathVariable String id, @RequestBody Topic topic) {
         topicService.deleteTopic(topic);
