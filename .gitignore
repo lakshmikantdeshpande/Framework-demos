@@ -11,7 +11,7 @@ local.properties
 .settings/
 .loadpath
 .recommenders
-
+**/target
 # Eclipse Core
 .project
 
@@ -29,6 +29,7 @@ local.properties
 
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
+**/*.class
 
 # Java annotation processor (APT)
 .factorypath
@@ -37,7 +38,7 @@ local.properties
 .buildpath
 
 # sbteclipse plugin
-.target
+**/.target
 
 # Tern plugin
 .tern-project
