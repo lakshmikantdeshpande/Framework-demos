@@ -35,7 +35,14 @@ public class SeleniumGridExample {
     @Test
     public void simpleTest() throws InterruptedException {
         webDriver.get(baseURL);
-        Thread.sleep(2000);
+        Thread.sleep(20000);
+        Assert.assertTrue(webDriver.getTitle().equals("Google"));
+    }
+
+    @Test
+    public void duplicateTest() throws InterruptedException {
+        webDriver.get(baseURL);
+        Thread.sleep(20000);
         Assert.assertTrue(webDriver.getTitle().equals("Google"));
     }
 
