@@ -6,8 +6,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
@@ -18,7 +18,7 @@ public class SeleniumGridExample {
     private WebDriver webDriver;
     private String baseURL, nodeURL;
 
-    @BeforeTest
+    @BeforeClass
     public void setup() throws MalformedURLException {
         DesiredCapabilities desiredCapabilities = DesiredCapabilities.chrome();
         ChromeOptions chromeOptions = new ChromeOptions();
@@ -38,7 +38,7 @@ public class SeleniumGridExample {
         Assert.assertTrue(webDriver.getTitle().equals("Google"));
     }
 
-    @AfterTest
+    @AfterClass
     public void tearDown() {
         if (webDriver != null) {
             webDriver.quit();
