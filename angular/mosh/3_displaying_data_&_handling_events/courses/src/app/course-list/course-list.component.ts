@@ -42,4 +42,8 @@ export class CourseListComponent implements OnInit {
     alert('You pressed ENTER, please don\'t');
   }
 
+  getEmailAddress(emailId: string) {
+    alert(`The provided email address is ${emailId}`);
+  }
+
 }

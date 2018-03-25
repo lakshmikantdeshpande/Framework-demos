@@ -28,5 +28,10 @@ By Cburnett at English Wikipedia (Own work) [<a href="http://www.gnu.org/copylef
 
 <br><br>
 <h3>Event filtering</h3>
-<h5>eg.keycode.enter</h5>
+<h5>eg. keycode.enter</h5>
 <input type="text" (keyup.enter)="onEnterKeyPressed()">
+
+<br><br>
+<h3>Template variables</h3>
+<h5>eg. #email</h5>
+<input type="email" #email (keyup.enter)="getEmailAddress(email.value)">
