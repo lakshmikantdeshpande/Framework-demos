@@ -38,4 +38,8 @@ export class CourseListComponent implements OnInit {
     console.log('div was clicked');
   }
 
+  onEnterKeyPressed() {
+    alert('You pressed ENTER, please don\'t');
+  }
+
 }
