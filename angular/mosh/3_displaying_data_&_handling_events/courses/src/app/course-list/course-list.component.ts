@@ -27,4 +27,15 @@ export class CourseListComponent implements OnInit {
     alert(`I guess it\'s saved at ${$event.screenX}, ${$event.screenY} :p`);
   }
 
+  saveEvent($event, propagate: boolean) {
+    console.log('event saved');
+    if (!propagate) {
+      $event.stopPropagation();
+    }
+  }
+
+  divClcked() {
+    console.log('div was clicked');
+  }
+
 }

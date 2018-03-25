@@ -16,3 +16,12 @@ By Cburnett at English Wikipedia (Own work) [<a href="http://www.gnu.org/copylef
 <br>
 <br>
 <button class="btn btn-primary" (click)="saveIt($event)">Save with coordinates</button>
+
+<br>
+<br>
+<br>
+<h3>Event bubbling</h3>
+<div (click)="divClcked()">
+  <button class="btn btn-primary" (click)="saveEvent($event, true)">Save event with propagation</button>
+  <button class="btn btn-primary" (click)="saveEvent($event, false)">Save event without propagation</button>
+</div>
