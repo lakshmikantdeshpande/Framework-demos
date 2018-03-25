@@ -35,3 +35,8 @@ By Cburnett at English Wikipedia (Own work) [<a href="http://www.gnu.org/copylef
 <h3>Template variables</h3>
 <h5>eg. #email</h5>
 <input type="email" #email (keyup.enter)="getEmailAddress(email.value)">
+
+<br><br>
+<h3>Two way binding [(ngModel)] </h3>
+<h5>[(ngModel)]  &lt;&lt; Banana in the box :P </h5>
+<input [(ngModel)]="emailId" (keyup.enter)="alertEmail()">

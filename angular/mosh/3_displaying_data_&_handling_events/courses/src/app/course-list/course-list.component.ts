@@ -46,4 +46,9 @@ export class CourseListComponent implements OnInit {
     alert(`The provided email address is ${emailId}`);
   }
 
+  emailId: string;
+  alertEmail() {
+    alert(this.emailId);
+  }
+
 }
