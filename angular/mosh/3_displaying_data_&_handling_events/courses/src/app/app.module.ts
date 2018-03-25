@@ -5,12 +5,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { CourseListComponent } from './course-list/course-list.component';
+import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CourseListComponent
+    CourseListComponent,
+    PipeDemoComponent
   ],
   imports: [
     BrowserModule,
