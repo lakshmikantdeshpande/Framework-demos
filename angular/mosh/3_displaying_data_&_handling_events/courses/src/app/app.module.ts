@@ -6,13 +6,15 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { CourseListComponent } from './course-list/course-list.component';
 import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
+import { SummaryPipe } from './summary.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CourseListComponent,
-    PipeDemoComponent
+    PipeDemoComponent,
+    SummaryPipe
   ],
   imports: [
     BrowserModule,
