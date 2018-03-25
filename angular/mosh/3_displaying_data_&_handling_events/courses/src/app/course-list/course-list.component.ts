@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class CourseListComponent implements OnInit {
   imageUrl: string;
   colspan: number;
+  isActive:boolean = true;
 
   constructor() {
      this.imageUrl = "https://upload.wikimedia.org/wikipedia/commons/c/c9/Jaguar_head_shot-edit2.jpg";
@@ -15,6 +16,15 @@ export class CourseListComponent implements OnInit {
    }
 
   ngOnInit() {
+  }
+
+  onSave() {
+    alert('I guess it\'s saved! :P');
+  }
+
+  saveIt($event) {
+    console.log($event);
+    alert(`I guess it\'s saved at ${$event.screenX}, ${$event.screenY} :p`);
   }
 
 }
