@@ -1,0 +1,42 @@
+<h3>DOM Attributes</h3><h5>(eg. attr.colspan)</h5>
+<img [src]='imageUrl' height="12%" width="12%">
+<br>
+By Cburnett at English Wikipedia (Own work) [<a href="http://www.gnu.org/copyleft/fdl.html">GFDL</a> or <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA-3.0</a>], <a href="https://commons.wikimedia.org/wiki/File%3AJaguar_head_shot-edit2.jpg">via Wikimedia Commons</a>
+<br>
+<table>
+  <td [attr.colspan]='colspan'></td>
+</table>
+
+<br>
+<h3>Class Style and Event Binding :)</h3>
+<button class="btn btn-primary" [class.active]="isActive">ClassBinding</button>
+<button class="btn btn-primary" [style.backgroundColor]="!isActive ? 'Red' : 'Green'">StyleBinding</button>
+<button class="btn btn-primary" [style.backgroundColor]="isActive ? 'Red' : 'Green'">!StyleBinding</button>
+
+<br><br>
+<h3>Event object</h3>
+<button class="btn btn-primary" (click)="onSave()">Save</button>
+<br><br>
+<button class="btn btn-primary" (click)="saveIt($event)">Save with coordinates</button>
+
+<br><br>
+<h3>Event bubbling</h3>
+<div (click)="divClcked()">
+  <button class="btn btn-primary" (click)="saveEvent($event, true)">Save event with propagation</button>
+  <button class="btn btn-primary" (click)="saveEvent($event, false)">Save event without propagation</button>
+</div>
+
+<br><br>
+<h3>Event filtering</h3>
+<h5>eg. keycode.enter</h5>
+<input type="text" (keyup.enter)="onEnterKeyPressed()">
+
+<br><br>
+<h3>Template variables</h3>
+<h5>eg. #email</h5>
+<input type="email" #email (keyup.enter)="getEmailAddress(email.value)">
+
+<br><br>
+<h3>Two way binding [(ngModel)] </h3>
+<h5>[(ngModel)]  &lt;&lt; Banana in the box :P </h5>
+<input [(ngModel)]="emailId" (keyup.enter)="alertEmail()">

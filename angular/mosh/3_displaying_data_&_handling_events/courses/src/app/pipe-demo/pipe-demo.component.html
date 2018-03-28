@@ -1,0 +1,15 @@
+{{course.title | uppercase | lowercase}}
+<br>
+{{course.students | number }}
+<br>
+{{course.rating | number:'1.2-2' }}
+<br>
+{{course.price | currency:"INR" }}
+<br>
+{{course.releaseDate | date:'shortDate' }}
+
+<br><br><br>
+<h3>Original Paragraph</h3>
+<p>{{ paragraph }}</p>
+<h3>After custom summary pipe</h3>
+<p>{{ paragraph | summary:25 }}</p>
