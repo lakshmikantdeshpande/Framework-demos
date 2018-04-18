@@ -1,0 +1,17 @@
+package com.rule
+
+import demo.model.Product
+
+rule "Diamond Offer"
+	when
+		productObject: Product(type=="diamond")
+	then
+		productObject.setDiscount(15);
+	end
+
+rule "Gold Offer"
+	when
+		productObject: Product(type=="gold")
+	then
+		productObject.setDiscount(25);
+	end
